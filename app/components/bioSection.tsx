@@ -51,7 +51,7 @@ function BioSection() {
           <p>Built out of frustration</p>
           <h1 className="text-6xl font-semibold">Meet the ahead app</h1>
         </div>
-        <div className="h-56 w-56 bg-white border-t-[1.5rem] relative border-l-[1.5rem] border-b-[1.5rem] border-r-[1.5rem]  border-zinc-100 rounded-full flex items-center justify-center">
+        <div className="h-56 w-56 bg-white z-10 border-t-[1.5rem] relative border-l-[1.5rem] border-b-[1.5rem] border-r-[1.5rem]  border-zinc-100 rounded-full flex items-center justify-center">
           <Image src="/char4.png" alt="character" width={100} height={100} />
           <Image
             className="absolute top-[-2.5rem]"
@@ -72,8 +72,8 @@ function BioSection() {
           lives. they tend to be happier and have healthier relationships.
         </p>
         <p className="text-2xl text-zinc-700">
-          But, most of us don't know how to improve our EQ. We don't know how to
-          identify
+          But, most of us don&apos;t know how to improve our EQ. We don&apos;t
+          know how to identify
         </p>
       </div>
 
