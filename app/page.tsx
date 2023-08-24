@@ -4,10 +4,15 @@ import FamiliarCards from "./components/familiarCards";
 import BioSection from "./components/bioSection";
 import SelfImprovementSection from "./components/selfImprovementSection";
 import SocialTest from "./components/socialTest";
+import StartTest from "./components/startTest";
+import WorkWithUs from "./components/workWithUs";
+import OpenVacancies from "./components/openVacancies";
+import Footer from './components/footer';
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center overflow-hidden">
+    
       <Navbar />
 
       <Header />
@@ -53,6 +58,14 @@ export default function Home() {
       </div>
 
       <SocialTest />
+
+      <StartTest />
+
+      <WorkWithUs />
+
+      <OpenVacancies />
+
+      <Footer />
 
     </main>
   );
