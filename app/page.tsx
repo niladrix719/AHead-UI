@@ -3,6 +3,7 @@ import Header from "./components/header";
 import FamiliarCards from "./components/familiarCards";
 import BioSection from "./components/bioSection";
 import SelfImprovementSection from "./components/selfImprovementSection";
+import SocialTest from "./components/socialTest";
 
 export default function Home() {
   return (
@@ -50,6 +51,8 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      <SocialTest />
 
     </main>
   );
