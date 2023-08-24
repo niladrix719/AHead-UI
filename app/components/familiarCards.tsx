@@ -4,9 +4,10 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-function familiarCards() {
+function FamiliarCards() {
   const boxContainerRef = useRef(null);
   const parentContainerRef = useRef(null);
+  const headingRef = useRef(null);
 
   // adding scroll trigger plugin
 
@@ -21,14 +22,20 @@ function familiarCards() {
       x: -1350,
       ease: "circ",
     });
+
+    gsap.from(headingRef.current, {
+      duration: 2,
+      scrollTrigger: parentContainerRef.current,
+      x: -350,
+      ease: "circ",
+    });
   }, []);
 
   return (
-    <div ref={parentContainerRef} className="flex flex-col gap-20 items-center">
-
+    <div ref={parentContainerRef} className="flex flex-col gap-20 items-center mb-40">
       {/* Heading */}
 
-      <h1 className="text-6xl font-semibold flex gap-4 items-center">
+      <h1 ref={headingRef} className="text-6xl font-semibold flex gap-4 items-center">
         Does this sound familiar...
         <Image src="/char.png" height={70} width={70} alt="floating design" />
       </h1>
@@ -88,9 +95,9 @@ function familiarCards() {
             You get a promotion at work
           </h1>
           <p className="text-md leading-[2rem] text-slate-200">
-            You question yourself and wonder when they'll realize you're an
-            unqualified impostor, instead of trusting yourself and your
-            abilities.
+            You question yourself and wonder when they&apos;ll realize
+            you&apos;re an unqualified impostor, instead of trusting yourself
+            and your abilities.
           </p>
         </div>
 
@@ -98,8 +105,8 @@ function familiarCards() {
           <Image src="/emoji1.png" alt="emoji" height={50} width={50} />
           <h1 className="text-xl font-semibold"> You attend a class reunion</h1>
           <p className="text-md leading-[2rem] text-zinc-600">
-            You compare yourself with your peer's achivement, instead of making
-            your self-judgement more independent of others.
+            You compare yourself with your peer&apos;s achivement, instead of
+            making your self-judgement more independent of others.
           </p>
         </div>
 
@@ -118,7 +125,6 @@ function familiarCards() {
         <div className="rounded-3xl p-8 bg-zinc-200 w-[26rem] flex flex-col gap-4">
           <Image src="/emoji4.png" alt="emoji" height={50} width={50} />
           <h1 className="text-xl font-semibold">
-            {" "}
             You hit dead end in a negotiation
           </h1>
           <p className="text-md leading-[2rem] text-zinc-600">
@@ -126,10 +132,9 @@ function familiarCards() {
             optimistic and solution oriented.
           </p>
         </div>
-        
       </div>
     </div>
   );
 }
 
-export default familiarCards;
+export default FamiliarCards;

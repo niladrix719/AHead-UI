@@ -4,7 +4,7 @@ import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 import { gsap } from "gsap";
 
-function header() {
+function Header() {
 
   // Header Refs
 
@@ -48,14 +48,14 @@ function header() {
       y: 20,
       ease: "power3.inOut",
     });
-
-    //floating characters animation
     gsap.from(circle2ref.current, {
       duration: 5,
       x: 20,
       y: -20,
       ease: "power3.inOut",
     });
+
+    //floating characters animation
     gsap.from(char1ref.current, {
       duration: 1,
       x: 0,
@@ -217,4 +217,4 @@ function header() {
   );
 }
 
-export default header;
+export default Header;

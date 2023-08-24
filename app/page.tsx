@@ -1,6 +1,7 @@
 import Navbar from "./components/navbar";
 import Header from "./components/header";
 import FamiliarCards from "./components/familiarCards";
+import BioSection from "./components/bioSection";
 
 export default function Home() {
   return (
@@ -29,7 +30,9 @@ export default function Home() {
       </div>
 
       <FamiliarCards />
-      
+
+      <BioSection />
+
     </main>
   );
 }
