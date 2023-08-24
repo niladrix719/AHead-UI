@@ -1,7 +1,6 @@
 function WorkWithUs() {
   return (
     <div className="bg-[#eeebfef7] overflow-hidden py-24 px-14 relative h-[140vh] w-[90%] justify-between flex p-8 gap-24 rounded-3xl">
-
       {/* left section */}
 
       <div className="flex flex-col w-[50%] items-start gap-12">
@@ -11,8 +10,8 @@ function WorkWithUs() {
             <h1 className="text-3xl font-semibold">About</h1>
             <p className="text-2xl text-zinc-600">
               At ahead our goal is to make self- improvement fun and lasting. We
-              know there's a way how to make it work. And that's what aHead is
-              all about!
+              know there&apos;s a way how to make it work. And that&apos;s what
+              aHead is all about!
             </p>
           </div>
           <div className="p-8 flex flex-col gap-4 bg-[#fef7f1] rounded-3xl">
