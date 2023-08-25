@@ -48,7 +48,7 @@ function OpenVacancies() {
      .to(ref.current, { duration: 0.35, height: '12.5rem' });
 
     // gsap.to(btnRef.current, { duration: 0.25, scale: 0.3, delay: 0.25, ease: 'power4' });
-    gsap.to(btnRef.current, { duration: 0, scale: 1 });
+    // gsap.to(btnRef.current, { duration: 0, scale: 1 });
   };
 
   return (
