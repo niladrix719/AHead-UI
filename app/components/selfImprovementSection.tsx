@@ -6,24 +6,24 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 function SelfImprovementSection() {
+  //refs
   const charRef = useRef(null);
   const headingRef = useRef(null);
   const scrollRef = useRef(null);
+
+  //content point refs
 
   const contentRef1 = useRef(null);
   const contentRef2 = useRef(null);
   const contentRef3 = useRef(null);
   const contentRef4 = useRef(null);
 
+  // circle refs
+
   const circle1Ref = useRef(null);
   const circle2Ref = useRef(null);
   const circle3Ref = useRef(null);
   const circle4Ref = useRef(null);
-
-  const dot1Ref = useRef(null);
-  const dot2Ref = useRef(null);
-  const dot3Ref = useRef(null);
-  const dot4Ref = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -64,6 +64,8 @@ function SelfImprovementSection() {
       scrollTrigger: headingRef.current,
     });
 
+    // content animation
+
     const contentRefs = [contentRef1.current, contentRef2.current, contentRef3.current, contentRef4.current];
 
     gsap.from(contentRefs, {
@@ -74,15 +76,7 @@ function SelfImprovementSection() {
         scrollTrigger: contentRef1.current,
     });
 
-    const dotRefs = [dot1Ref.current, dot2Ref.current, dot3Ref.current, dot4Ref.current];
-
-    gsap.from(dotRefs, {
-        duration: 4,
-        stagger: 1,
-        scale: 0.75,
-        ease: "power1.inOut",
-        scrollTrigger: dot1Ref.current,
-    });
+    // circle animation on timeline
 
     const circleRefs = [circle1Ref.current, circle2Ref.current, circle3Ref.current, circle4Ref.current];
 
@@ -143,10 +137,10 @@ function SelfImprovementSection() {
               nothing else).
             </p>
             <div ref={circle1Ref} className="h-10 w-10 bg-violet-100 rounded-full absolute left-[-3.35rem] top-[0.5rem] flex items-center justify-center">
-              <div ref={dot1Ref} className="h-[1.25rem] w-[1.25rem] bg-violet-600 rounded-full"></div>
+              <div className="h-[1.25rem] w-[1.25rem] bg-violet-600 rounded-full"></div>
             </div>
             <div ref={circle2Ref} className="h-10 w-10 bg-violet-100 rounded-full absolute left-[-3.35rem] top-[0.5rem] flex items-center justify-center">
-              <div ref={dot2Ref} className="h-[1.25rem] w-[1.25rem] bg-violet-600 rounded-full"></div>
+              <div className="h-[1.25rem] w-[1.25rem] bg-violet-600 rounded-full"></div>
             </div>
           </div>
 
@@ -159,7 +153,7 @@ function SelfImprovementSection() {
               science-backed techniques to use.
             </p>
             <div ref={circle2Ref} className="h-10 w-10 bg-violet-100 rounded-full absolute left-[-3.35rem] top-[0.5rem] flex items-center justify-center">
-              <div ref={dot2Ref} className="h-[1.25rem] w-[1.25rem] bg-violet-600 rounded-full"></div>
+              <div className="h-[1.25rem] w-[1.25rem] bg-violet-600 rounded-full"></div>
             </div>
           </div>
 
@@ -173,7 +167,7 @@ function SelfImprovementSection() {
               your goals.
             </p>
             <div ref={circle3Ref} className="h-10 w-10 bg-violet-100 rounded-full absolute left-[-3.35rem] top-[0.5rem] flex items-center justify-center">
-              <div ref={dot3Ref} className="h-[1.25rem] w-[1.25rem] bg-violet-600 rounded-full"></div>
+              <div className="h-[1.25rem] w-[1.25rem] bg-violet-600 rounded-full"></div>
             </div>
           </div>
 
@@ -187,7 +181,7 @@ function SelfImprovementSection() {
               nothing else).
             </p>
             <div ref={circle4Ref} className="h-10 w-10 bg-violet-100 rounded-full absolute left-[-3.35rem] top-[0.5rem] flex items-center justify-center">
-              <div ref={dot4Ref} className="h-[1.25rem] w-[1.25rem] bg-violet-600 rounded-full"></div>
+              <div className="h-[1.25rem] w-[1.25rem] bg-violet-600 rounded-full"></div>
             </div>
           </div>
 

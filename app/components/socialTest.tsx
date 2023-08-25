@@ -6,9 +6,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from 'next/image';
 
 function SocialTest() {
+  //step refs
   const step1Ref = useRef(null);
   const step2Ref = useRef(null);
   const step3Ref = useRef(null);
+
+  //timeline refs
 
   const timeline1Ref = useRef(null);
   const timeline2Ref = useRef(null);
@@ -18,6 +21,9 @@ function SocialTest() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+
+    //step animation
+
     gsap.from([step1Ref.current, step2Ref.current, step3Ref.current], {
       duration: 0.45,
       scale: 0.75,
@@ -26,6 +32,8 @@ function SocialTest() {
       stagger: 0.15,
       scrollTrigger: step1Ref.current,
     });
+
+    //timeline animation
 
     gsap.from([timeline1Ref.current, timeline2Ref.current, timeline3Ref.current, timeline4Ref.current], {
       duration: 0.75,
@@ -40,6 +48,8 @@ function SocialTest() {
 
   return (
     <div className="bg-[#edf8fe] overflow-hidden pb-0 p-20 relative h-[100vh] w-[90%] items-center flex flex-col p-8 gap-20 rounded-3xl">
+      {/* headings */}
+
       <div className="flex flex-col items-center w-full gap-4">
         <p className="text-lg">
           Let your friends, family and co-workers (anonymously) rate your social
@@ -49,6 +59,8 @@ function SocialTest() {
           Ever wondered what other&apos;s think of you?
         </h1>
       </div>
+
+      {/* steps */}
 
       <div className="flex justify-evenly w-full">
         <div ref={step1Ref} className="flex flex-col items-center w-1/4 gap-4">
@@ -70,6 +82,8 @@ function SocialTest() {
         </div>
       </div>
 
+      {/* timeline */}
+
       <div className="w-4/6 bg-white h-[32vh] rounded-3xl shadow-lg flex items-center justify-center">
         <div className="w-5/6 border-2 relative">
           <div ref={timeline1Ref} className="rounded-full w-[1.5rem] h-[1.5rem] bg-[#6341ef] absolute top-[-0.75rem]">
@@ -86,6 +100,7 @@ function SocialTest() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }

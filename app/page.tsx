@@ -15,11 +15,11 @@ type TextProps = {
 };
 
 function SectionTitle({ text }: TextProps) {
-  return <h1 className="text-4xl font-semibold">{text}</h1>;
+  return <h1 className="text-4xl font-semibold w-1/3">{text}</h1>;
 }
 
 function SectionText({ text }: TextProps) {
-  return <p className="text-2xl text-zinc-600">{text}</p>;
+  return <p className="text-2xl text-zinc-600 w-1/3">{text}</p>;
 }
 
 export default function Home() {

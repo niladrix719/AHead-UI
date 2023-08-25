@@ -64,8 +64,9 @@ function FamiliarCards() {
           <Image src="/emoji4.png" alt="emoji" height={50} width={50} />
           <h1 className="text-xl font-semibold"> You feel stuck</h1>
           <p className="text-md leading-[2rem] text-slate-200">
-            You feel stuck You feel stuck You feel stuck You feel stuck You feel
-            stuck You feel stuck You feel stuck You feel stuck You feel
+            You question yourself and wonder when they&apos;ll realize
+            you&apos;re an unqualified impostor, instead of trusting yourself
+            and your abilities.
           </p>
         </div>
 
@@ -73,8 +74,9 @@ function FamiliarCards() {
           <Image src="/emoji4.png" alt="emoji" height={50} width={50} />
           <h1 className="text-xl font-semibold"> You feel stuck</h1>
           <p className="text-md leading-[2rem] text-zinc-600">
-            You feel stuck You feel stuck You feel stuck You feel stuck You feel
-            stuck You feel stuck You feel stuck You feel stuck You feel
+            You question yourself and wonder when they&apos;ll realize
+            you&apos;re an unqualified impostor, instead of trusting yourself
+            and your abilities.
           </p>
         </div>
 
@@ -82,8 +84,9 @@ function FamiliarCards() {
           <Image src="/emoji4.png" alt="emoji" height={50} width={50} />
           <h1 className="text-xl font-semibold"> You feel stuck</h1>
           <p className="text-md leading-[2rem] text-zinc-600">
-            You feel stuck You feel stuck You feel stuck You feel stuck You feel
-            stuck You feel stuck You feel stuck You feel stuck You feel
+            You question yourself and wonder when they&apos;ll realize
+            you&apos;re an unqualified impostor, instead of trusting yourself
+            and your abilities.
           </p>
         </div>
 
@@ -91,8 +94,9 @@ function FamiliarCards() {
           <Image src="/emoji4.png" alt="emoji" height={50} width={50} />
           <h1 className="text-xl font-semibold"> You feel stuck</h1>
           <p className="text-md leading-[2rem] text-zinc-600">
-            You feel stuck You feel stuck You feel stuck You feel stuck You feel
-            stuck You feel stuck You feel stuck You feel stuck You feel
+            You question yourself and wonder when they&apos;ll realize
+            you&apos;re an unqualified impostor, instead of trusting yourself
+            and your abilities.
           </p>
         </div>
 

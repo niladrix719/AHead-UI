@@ -13,6 +13,9 @@ function WorkWithUs() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+
+    //timeline animation for scroll
+    
     const timeline = gsap.timeline({ repeat: -1, yoyo: true });
     timeline.to(scrollRef.current, {
       duration: 5,
@@ -93,6 +96,7 @@ function WorkWithUs() {
               bad habits, fears, etc.
             </p>
           </div>
+
           <div className="p-8 flex flex-col w-5/6 gap-4 bg-white rounded-3xl shadow[#eeebfef7]">
             <h1 className="text-xl font-semibold">
               Learn more about who you are and where you want to go
@@ -102,6 +106,7 @@ function WorkWithUs() {
               do things the way you do.
             </p>
           </div>
+
           <div className="p-8 flex flex-col w-5/6 gap-4 bg-white rounded-3xl shadow[#eeebfef7]">
             <h1 className="text-xl font-semibold">
               Play and grow together with others on the same journey
@@ -111,6 +116,7 @@ function WorkWithUs() {
               day towards achieving your goals!
             </p>
           </div>
+
           <div className="p-8 flex flex-col w-5/6 gap-4 bg-white rounded-3xl shadow[#eeebfef7]">
             <h1 className="text-xl font-semibold">
               Power through, even when the going gets tough
@@ -120,6 +126,7 @@ function WorkWithUs() {
               bad habits, fears, etc.
             </p>
           </div>
+
           <div className="p-8 flex flex-col w-5/6 gap-4 bg-white rounded-3xl shadow[#eeebfef7]">
             <h1 className="text-xl font-semibold">
               Learn more about who you are and where you want to go
@@ -129,6 +136,7 @@ function WorkWithUs() {
               do things the way you do.
             </p>
           </div>
+
           <div className="p-8 flex flex-col w-5/6 gap-4 bg-white rounded-3xl shadow[#eeebfef7]">
             <h1 className="text-xl font-semibold">
               Play and grow together with others on the same journey
@@ -138,6 +146,7 @@ function WorkWithUs() {
               day towards achieving your goals!
             </p>
           </div>
+
         </div>
       </div>
     </div>
