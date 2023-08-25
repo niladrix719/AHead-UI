@@ -15,15 +15,12 @@ function SelfImprovementSection() {
     // animation for the floating design
 
     const charTimeline = gsap.timeline();
-    charTimeline.from(charRef.current, {
+    gsap.from(charRef.current, {
       duration: 3,
-      x: 300,
+      x: 400,
       rotate: -95,
-      ease: "power1.inOut",
-    }).to(charRef.current, {
-      duration: 2,
-      rotate: -5,
-      ease: "power1.inOut",
+      scrollTrigger: charRef.current,
+      ease: "power1.inOut"
     });
 
     gsap.from(headingRef.current, {
@@ -46,19 +43,20 @@ function SelfImprovementSection() {
           <p className="text-2xl">
             Wrong with self-improvement &amp; how we&apos;re fixing it
           </p>
-          <h1 className="flex items-center text-6xl font-semibold relative">
+          <h1 className="flex items-center text-6xl font-semibold">
             Self-Improvement. Ugh.
-            <Image
+          </h1>
+        </div>
+        <div className="w-[40%]">
+          <Image
               src="/char3.png"
               height={78}
               width={78}
               alt="floating design"
-              className="rotate-45 absolute right-[-5rem]"
+              className="rotate-45 right-[-5rem]"
               ref={charRef}
             />
-          </h1>
         </div>
-        <div className="w-[40%]"></div>
       </div>
 
       {/* body */}

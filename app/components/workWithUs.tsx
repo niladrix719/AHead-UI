@@ -7,10 +7,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 function WorkWithUs() {
   const headingRef = useRef(null);
   const heading2Ref = useRef(null);
+  const scrollRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+    const timeline = gsap.timeline({ repeat: -1, yoyo: true });
+    timeline.to(scrollRef.current, {
+      duration: 5,
+      scrollTop:
+        (scrollRef.current as unknown as HTMLElement).scrollHeight -
+        (scrollRef.current as unknown as HTMLElement).clientHeight,
+      ease: "linear",
+    });
+
     gsap.from(headingRef.current, {
       duration: 1,
       x: -500,
@@ -63,7 +73,7 @@ function WorkWithUs() {
         <h1 ref={heading2Ref} className="text-6xl text-end w-full text-violet-500 font-semibold">
           ahead
         </h1>
-        <div className="flex flex-col gap-8 w-full rounded-3xl items-start h-[100vh] overflow-y-scroll custom-scrollbar">
+        <div ref={scrollRef} className="flex flex-col gap-8 w-full rounded-3xl items-start h-[100vh] overflow-y-scroll custom-scrollbar">
           <div className="p-8 flex flex-col w-5/6 gap-4 bg-white rounded-3xl shadow[#eeebfef7]">
             <h1 className="text-xl font-semibold">
               Power through, even when the going gets tough

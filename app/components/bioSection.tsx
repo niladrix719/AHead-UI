@@ -12,8 +12,13 @@ function BioSection() {
 
   const float1ref = useRef(null);
   const float2ref = useRef(null);
+  const float3ref = useRef(null);
   const circle1ref = useRef(null);
   const circle2ref = useRef(null);
+  const circle3ref = useRef(null);
+
+  const charRef = useRef(null);
+  const stepRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -30,14 +35,25 @@ function BioSection() {
       scrollTrigger: headingRef.current,
     });
 
-    gsap.to(float1ref.current, {
-      duration: 3,
-      rotation: -640,
-      ease: "linear",
-      repeat: -1,
+    gsap.from(charRef.current, {
+      duration: 1,
+      rotation: '45deg',
+      scale: 0.5,
+      ease: "back.inOut",
+      scrollTrigger: charRef.current,
     });
-    gsap.to(float2ref.current, {
-      duration: 2,
+
+    gsap.from(stepRef.current, {
+      duration: 0.75,
+      delay: 0.5,
+      y: 100,
+      scale: 0.5,
+      ease: "back.inOut",
+      scrollTrigger: charRef.current,
+    });
+
+    gsap.to([float1ref.current, float2ref.current, float3ref.current], {
+      duration: 3,
       rotation: -640,
       ease: "linear",
       repeat: -1,
@@ -54,6 +70,19 @@ function BioSection() {
       y: -20,
       ease: "power3.inOut",
     });
+    gsap.from(circle3ref.current, {
+      duration: 2,
+      x: 700,
+      ease: "circ",
+      scrollTrigger: circle3ref.current,
+    });
+    gsap.from(circle3ref.current, {
+      duration: 1,
+      delay: 2,
+      y: 100,
+      ease: "circ",
+      scrollTrigger: circle3ref.current,
+    });
   }, []);
 
   return (
@@ -66,16 +95,17 @@ function BioSection() {
           <h1 className="text-6xl font-semibold">Meet the ahead app</h1>
         </div>
         <div className="h-56 w-56 bg-white z-10 border-t-[1.5rem] relative border-l-[1.5rem] border-b-[1.5rem] border-r-[1.5rem]  border-zinc-100 rounded-full flex items-center justify-center">
-          <Image src="/char4.png" alt="character" width={100} height={100} />
+          <Image className='z-10' ref={charRef} src="/char4.png" alt="character" width={100} height={100} />
           <Image
             className="absolute top-[-2.5rem]"
             src="/step1.png"
             alt="step 1"
             width={55}
             height={55}
+            ref={stepRef}
           />
         </div>
-        <div className="h-96 w-96 bg-[#fae8dc] absolute rounded-full left-[-10rem] top-[10rem]"></div>
+        <div ref={circle3ref} className="h-96 w-96 bg-[#fae8dc] absolute rounded-full left-[-10rem] top-[10rem]"></div>
       </div>
 
       {/* right section */}
@@ -127,6 +157,7 @@ function BioSection() {
         height={60}
         width={60}
         alt="floating design"
+        ref={float3ref}
       />
     </div>
   );

@@ -19,7 +19,7 @@ export default function Home() {
 
       <div className="flex justify-between items-start w-[85%] py-40">
         <div className="w-1/3">
-          <h1 className="text-5xl font-semibold">EQ beats IQ</h1>
+          <h1 className="text-4xl font-semibold">EQ beats IQ</h1>
         </div>
         <div className="w-1/3">
           <p className="text-2xl text-zinc-600">
@@ -43,7 +43,7 @@ export default function Home() {
 
       <div className="flex justify-between items-start w-[85%] py-40">
         <div className="w-1/3">
-          <h1 className="text-5xl font-semibold">Be the best you with EQ</h1>
+          <h1 className="text-4xl font-semibold px-4">Be the best you with EQ</h1>
         </div>
         <div className="w-1/3">
           <p className="text-2xl text-zinc-600">
