@@ -9,7 +9,7 @@ A UI website of Ahead dribbble APP.
 Clone the project
 
 ```bash
-  git clone git clone https://github.com/niladrix719/AHead-UI.git
+  git clone https://github.com/niladrix719/AHead-UI.git
 ```
 
 Go to the project directory
