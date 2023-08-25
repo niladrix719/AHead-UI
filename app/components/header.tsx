@@ -25,6 +25,7 @@ function Header() {
   const phoneRef = useRef(null);
   const border1ref = useRef(null);
   const border2ref = useRef(null);
+  const outerRef = useRef(null);
 
   // Animations using gsap
 
@@ -120,6 +121,12 @@ function Header() {
       rotate: 90,
       ease: "power3.inOut",
     });
+    gsap.from(outerRef.current, {
+      duration: 0.65,
+      scale: 0,
+      ease: "back.inOut",
+      scrollTrigger: outerRef.current,
+    });
   }, []);
 
   return (
@@ -175,13 +182,16 @@ function Header() {
                 backgroundSize: "cover",
               }}
             >
-              <Image className='absolute top-[7.5rem] left-[-11rem]' src='/outer.png' alt='outer image' width={180} height={180} />
+              <Image ref={outerRef} className='absolute top-[7.5rem] left-[-11rem]' src='/outer.png' alt='outer image' width={180} height={180} />
             </div>
           </div>
 
           <div className="h-[1.4rem] w-[1.05rem] absolute top-[-0.75rem] rotate-[-90deg] rounded-t-full bg-blue-400 border-b-2 border-dotted border-[#eeebfef7]"></div>
           <div className="h-[1.4rem] w-[1.05rem] absolute left-[-0.75rem] rotate-[180deg] rounded-t-full bg-red-400 border-b-2 border-dotted border-[#eeebfef7]"></div>
           <div className="h-[1.4rem] w-[1.05rem] absolute right-[1.95rem] bottom-[8rem] rotate-[30deg] rounded-t-full bg-purple-400 border-b-2 border-dotted border-[#eeebfef7]"></div>
+
+          {/*the 3 characters*/}
+
           <Image
             src="/char2.png"
             className="absolute top-[27.5rem] left-[3rem]"

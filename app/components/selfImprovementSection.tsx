@@ -42,14 +42,14 @@ function SelfImprovementSection() {
 
     gsap.from(charRef.current, {
       duration: 3,
-      delay: 3,
+      delay: 2,
       scrollTrigger: charRef.current,
       ease: "power1.inOut"
     });
 
     gsap.to(charRef.current, {
-      duration: 2,
-      delay: 5,
+      duration: 0.85,
+      delay: 2,
       y: 0,
       rotate: -10,
       ease: "power1.inOut",
@@ -69,8 +69,8 @@ function SelfImprovementSection() {
     const contentRefs = [contentRef1.current, contentRef2.current, contentRef3.current, contentRef4.current];
 
     gsap.from(contentRefs, {
-        duration: 4,
-        stagger: 1,
+        duration: 2,
+        stagger: 0.5,
         opacity: 0.25,
         ease: "power1.inOut",
         scrollTrigger: contentRef1.current,
