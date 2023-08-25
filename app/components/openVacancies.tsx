@@ -29,7 +29,7 @@ function OpenVacancies() {
 
   const handleMouseEnter = (ref: React.MutableRefObject<null>, btnRef: React.MutableRefObject<null>) => {
     const t = gsap.timeline();
-    t.to(ref.current, { duration: 0.35, backgroundColor: "#ffd4af" }).to(
+    t.to(ref.current, { duration: 0.35, backgroundColor: "#ffe7d2" }).to(
       ref.current,
       { duration: 0.35, height: "17.5rem" }
     );

@@ -71,6 +71,7 @@ function BioSection() {
       ease: "power3.inOut",
     });
     gsap.from(circle3ref.current, {
+      delay: 0.25,
       duration: 2,
       x: 700,
       ease: "circ",
@@ -78,7 +79,7 @@ function BioSection() {
     });
     gsap.from(circle3ref.current, {
       duration: 1,
-      delay: 2,
+      delay: 2.25,
       y: 100,
       ease: "circ",
       scrollTrigger: circle3ref.current,
