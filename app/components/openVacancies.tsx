@@ -4,11 +4,16 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function OpenVacancies() {
+  //heading ref
   const headingRef = useRef(null);
+
+  //card refs
 
   const card1Ref = useRef(null);
   const card2Ref = useRef(null);
   const card3Ref = useRef(null);
+
+  //btn refs
 
   const btn1Ref = useRef(null);
   const btn2Ref = useRef(null);
@@ -17,6 +22,8 @@ function OpenVacancies() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+    //on mount animation
+
     gsap.from(headingRef.current, {
       duration: 1,
       x: -500,
@@ -26,6 +33,8 @@ function OpenVacancies() {
       scrollTrigger: headingRef.current,
     });
   }, []);
+
+  //on hover animation
 
   const handleMouseEnter = (ref: React.MutableRefObject<null>, btnRef: React.MutableRefObject<null>) => {
     const t = gsap.timeline();
@@ -42,13 +51,12 @@ function OpenVacancies() {
     });
   };
 
+  //on hover Leave animation
+
   const handleMouseLeave = (ref: React.MutableRefObject<null>, btnRef: React.MutableRefObject<null>) => {
     const t = gsap.timeline();
     t.to(ref.current, { duration: 0.35, backgroundColor: '#fefbec' })
      .to(ref.current, { duration: 0.35, height: '12.5rem' });
-
-    // gsap.to(btnRef.current, { duration: 0.25, scale: 0.3, delay: 0.25, ease: 'power4' });
-    // gsap.to(btnRef.current, { duration: 0, scale: 1 });
   };
 
   return (
@@ -130,6 +138,7 @@ function OpenVacancies() {
             </button>
           </div>
         </div>
+        
       </div>
     </div>
   );

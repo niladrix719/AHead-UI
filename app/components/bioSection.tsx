@@ -8,8 +8,6 @@ function BioSection() {
 
   // randoms floating animation refs
 
-  const headingRef = useRef(null);
-
   const float1ref = useRef(null);
   const float2ref = useRef(null);
   const float3ref = useRef(null);
@@ -19,12 +17,13 @@ function BioSection() {
 
   const charRef = useRef(null);
   const stepRef = useRef(null);
+  const headingRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
 
-    // random shapes animation
+    //animations
 
     gsap.from(headingRef.current, {
       duration: 1,
@@ -51,6 +50,8 @@ function BioSection() {
       ease: "back.inOut",
       scrollTrigger: charRef.current,
     });
+
+    // random shapes animation
 
     gsap.to([float1ref.current, float2ref.current, float3ref.current], {
       duration: 3,
