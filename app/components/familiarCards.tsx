@@ -8,6 +8,7 @@ function FamiliarCards() {
   const boxContainerRef = useRef(null);
   const parentContainerRef = useRef(null);
   const headingRef = useRef(null);
+  const charRef = useRef(null);
 
   // adding scroll trigger plugin
 
@@ -31,16 +32,30 @@ function FamiliarCards() {
       ease: "back.inOut",
       scrollTrigger: headingRef.current,
     });
+
+    gsap.from(charRef.current, {
+      duration: 2.75,
+      x: 300,
+      y: 50,
+      rotate: -90,
+      ease: "back.inOut",
+      scrollTrigger: charRef.current,
+    });
   }, []);
 
   return (
-    <div ref={parentContainerRef} className="flex flex-col gap-20 items-center mb-40">
+    <div ref={parentContainerRef} className="flex flex-col gap-20 items-center mb-40 w-[90%]">
       {/* Heading */}
-
+      
+      <div className='flex w-full'>
       <h1 ref={headingRef} className="text-6xl font-semibold flex gap-4 items-center">
         Does this sound familiar...
-        <Image src="/char.png" height={70} width={70} alt="floating design" />
       </h1>
+
+      <div className='w-[40%]'>
+        <Image ref={charRef} src="/char.png" height={70} width={70} alt="floating design" />
+      </div>
+      </div>
 
       {/* Cards */}
 

@@ -5,9 +5,7 @@ import { AiFillStar } from "react-icons/ai";
 import { gsap } from "gsap";
 
 function Header() {
-
   // Header Refs
-
 
   // random shapes animation refs
   const float1ref = useRef(null);
@@ -28,9 +26,7 @@ function Header() {
   const border1ref = useRef(null);
   const border2ref = useRef(null);
 
-
   // Animations using gsap
-
 
   useEffect(() => {
     // random shapes animation
@@ -119,16 +115,15 @@ function Header() {
       ease: "power3.inOut",
     });
     gsap.from(border2ref.current, {
-      duration: 0.5,
+      duration: 0.8,
       scale: 0.75,
-      rotate: 30,
+      rotate: 120,
       ease: "power3.inOut",
     });
   }, []);
 
   return (
     <div className="bg-[#eeebfef7] overflow-hidden relative h-[90vh] w-[90%] flex justify-between p-8 items-center rounded-3xl">
-
       {/* left section */}
 
       <div className="w-1/2 px-4 flex flex-col gap-[2rem] items-start">
@@ -165,7 +160,7 @@ function Header() {
       <div className="relative">
         <div
           ref={border2ref}
-          className="rounded-full h-[37rem] w-[37rem] border-dashed border-4 border-white flex items-center justify-center"
+          className="rounded-full h-[37rem] w-[37rem] relative border-dashed border-4 border-white flex items-center justify-center"
         >
           <div
             ref={border1ref}
@@ -173,34 +168,45 @@ function Header() {
           >
             <div
               ref={phoneRef}
-              className="h-[25rem] w-[13.5rem] border-4 bg-white border-black rounded-3xl"
-            ></div>
+              className="h-[26rem] w-[12.5rem] border-4 bg-white border-black rounded-3xl relative left-[3rem]"
+              style={{
+                backgroundImage: `url('/screenshot.png')`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            >
+              <Image className='absolute top-[7.5rem] left-[-11rem]' src='/outer.png' alt='outer image' width={180} height={180} />
+            </div>
           </div>
+
+          <div className="h-[1.4rem] w-[1.05rem] absolute top-[-0.75rem] rotate-[-90deg] rounded-t-full bg-blue-400 border-b-2 border-dotted border-[#eeebfef7]"></div>
+          <div className="h-[1.4rem] w-[1.05rem] absolute left-[-0.75rem] rotate-[180deg] rounded-t-full bg-red-400 border-b-2 border-dotted border-[#eeebfef7]"></div>
+          <div className="h-[1.4rem] w-[1.05rem] absolute right-[1.95rem] bottom-[8rem] rotate-[30deg] rounded-t-full bg-purple-400 border-b-2 border-dotted border-[#eeebfef7]"></div>
+          <Image
+            src="/char2.png"
+            className="absolute top-[27.5rem] left-[3rem]"
+            height={110}
+            width={110}
+            alt="floating design"
+            ref={char2ref}
+          />
+          <Image
+            src="/char3.png"
+            className="absolute top-[3rem] left-[2rem]"
+            height={95}
+            width={95}
+            alt="floating design"
+            ref={char3ref}
+          />
+          <Image
+            src="/char.png"
+            className="absolute top-[11.5rem] right-[-1rem]"
+            height={70}
+            width={70}
+            alt="floating design"
+            ref={char1ref}
+          />
         </div>
-        <Image
-          src="/char2.png"
-          className="absolute top-[27.5rem] left-[3rem]"
-          height={110}
-          width={110}
-          alt="floating design"
-          ref={char2ref}
-        />
-        <Image
-          src="/char3.png"
-          className="absolute top-[3rem] left-[2rem]"
-          height={95}
-          width={95}
-          alt="floating design"
-          ref={char3ref}
-        />
-        <Image
-          src="/char.png"
-          className="absolute top-[11.5rem] right-[-1rem]"
-          height={70}
-          width={70}
-          alt="floating design"
-          ref={char1ref}
-        />
       </div>
 
       {/* floating shapes marked absolute */}
@@ -245,9 +251,7 @@ function Header() {
         className="rounded-full absolute bottom-[-0.75rem] left-[32%] h-12 w-12 bg-red-400"
       ></div>
 
-      <div
-        className="rounded-full absolute top-[-1.5rem] right-[10rem] h-12 w-12 bg-red-300"
-      ></div>
+      <div className="rounded-full absolute top-[-1.5rem] right-[10rem] h-12 w-12 bg-red-300"></div>
     </div>
   );
 }
