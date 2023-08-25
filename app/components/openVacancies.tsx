@@ -18,7 +18,7 @@ function OpenVacancies() {
 
   useEffect(() => {
     gsap.from(headingRef.current, {
-      duration: 1.5,
+      duration: 1,
       x: -500,
       scale: 0.65,
       opacity: 0.5,

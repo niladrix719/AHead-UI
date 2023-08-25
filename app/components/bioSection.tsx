@@ -2,19 +2,33 @@
 import Image from "next/image";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function BioSection() {
 
   // randoms floating animation refs
+
+  const headingRef = useRef(null);
 
   const float1ref = useRef(null);
   const float2ref = useRef(null);
   const circle1ref = useRef(null);
   const circle2ref = useRef(null);
 
+  gsap.registerPlugin(ScrollTrigger);
+
   useEffect(() => {
 
     // random shapes animation
+
+    gsap.from(headingRef.current, {
+      duration: 1,
+      x: -500,
+      scale: 0.65,
+      opacity: 0.5,
+      ease: "back.inOut",
+      scrollTrigger: headingRef.current,
+    });
 
     gsap.to(float1ref.current, {
       duration: 3,
@@ -47,7 +61,7 @@ function BioSection() {
       {/* left section */}
 
       <div className="flex flex-col gap-20 relative w-1/2 items-center mt-20">
-        <div className="flex flex-col gap-4">
+        <div ref={headingRef} className="flex flex-col gap-4">
           <p>Built out of frustration</p>
           <h1 className="text-6xl font-semibold">Meet the ahead app</h1>
         </div>

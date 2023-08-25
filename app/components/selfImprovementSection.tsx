@@ -2,10 +2,13 @@
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function SelfImprovementSection() {
   const charRef = useRef(null);
   const headingRef = useRef(null);
+
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
 
@@ -24,9 +27,12 @@ function SelfImprovementSection() {
     });
 
     gsap.from(headingRef.current, {
-      duration: 0.5,
-      x: -300,
-      ease: "power1.inOut",
+      duration: 1,
+      x: -500,
+      scale: 0.65,
+      opacity: 0.5,
+      ease: "back.inOut",
+      scrollTrigger: headingRef.current,
     });
   }, []);
 

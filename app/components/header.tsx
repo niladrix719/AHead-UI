@@ -14,6 +14,8 @@ function Header() {
   const float2ref = useRef(null);
   const circle1ref = useRef(null);
   const circle2ref = useRef(null);
+  const circle3ref = useRef(null);
+  const circle4ref = useRef(null);
 
   // floating characters animation refs
   const char1ref = useRef(null);
@@ -54,6 +56,18 @@ function Header() {
       y: -20,
       ease: "power3.inOut",
     });
+    gsap.from(circle3ref.current, {
+      duration: 1.75,
+      scale: 0.5,
+      repeat: 1,
+      ease: "circ",
+    });
+    gsap.from(circle4ref.current, {
+      duration: 1.75,
+      scale: 0.5,
+      repeat: 1,
+      ease: "circ",
+    });
 
     //floating characters animation
     gsap.from(char1ref.current, {
@@ -81,13 +95,17 @@ function Header() {
       ease: "back",
     });
 
-    //right animation
+    //left animation
     gsap.from(headingref.current, {
-      duration: 1,
-      x: -300,
-      y: 0,
-      ease: "power3.inOut",
+      duration: 0.65,
+      x: -500,
+      scale: 0.65,
+      opacity: 0.5,
+      ease: "back.inOut",
+      scrollTrigger: headingref.current,
     });
+
+    //right animation
     gsap.from(phoneRef.current, {
       duration: 0.5,
       scale: 0.75,
@@ -195,6 +213,7 @@ function Header() {
         alt="floating design"
         ref={float1ref}
       />
+
       <Image
         src="/float1.png"
         className="absolute top-[1.5rem] left-[34%] rotate-90"
@@ -203,15 +222,31 @@ function Header() {
         alt="floating design"
         ref={float2ref}
       />
+
       <div
         ref={circle1ref}
         className="rounded-full absolute top-[6.5rem] left-[32%] h-12 opacity-50 w-12 bg-orange-300 flex items-center justify-center"
       >
         <div className="rounded-full h-4 w-4 bg-red-500"></div>
       </div>
+
       <div
         ref={circle2ref}
         className="rounded-full absolute top-[2.75rem] left-[42%] h-4 w-4 bg-red-300"
+      ></div>
+
+      <div
+        ref={circle3ref}
+        className="rounded-full absolute top-[23rem] left-[-1.5rem] h-12 w-12 bg-red-300"
+      ></div>
+
+      <div
+        ref={circle4ref}
+        className="rounded-full absolute bottom-[-0.75rem] left-[32%] h-12 w-12 bg-red-400"
+      ></div>
+
+      <div
+        className="rounded-full absolute top-[-1.5rem] right-[10rem] h-12 w-12 bg-red-300"
       ></div>
     </div>
   );

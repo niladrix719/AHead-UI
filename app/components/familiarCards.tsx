@@ -24,10 +24,12 @@ function FamiliarCards() {
     });
 
     gsap.from(headingRef.current, {
-      duration: 2,
-      scrollTrigger: parentContainerRef.current,
-      x: -350,
-      ease: "circ",
+      duration: 1,
+      x: -500,
+      scale: 0.65,
+      opacity: 0.5,
+      ease: "back.inOut",
+      scrollTrigger: headingRef.current,
     });
   }, []);
 
