@@ -67,8 +67,8 @@ function SelfImprovementSection() {
     const contentRefs = [contentRef1.current, contentRef2.current, contentRef3.current, contentRef4.current];
 
     gsap.from(contentRefs, {
-        duration: 6,
-        stagger: 1.5,
+        duration: 4,
+        stagger: 1,
         opacity: 0.25,
         ease: "power1.inOut",
         scrollTrigger: contentRef1.current,
@@ -77,9 +77,9 @@ function SelfImprovementSection() {
     const dotRefs = [dot1Ref.current, dot2Ref.current, dot3Ref.current, dot4Ref.current];
 
     gsap.from(dotRefs, {
-        duration: 0,
-        stagger: 0.45,
-        scale: 0.25,
+        duration: 4,
+        stagger: 1,
+        scale: 0.75,
         ease: "power1.inOut",
         scrollTrigger: dot1Ref.current,
     });
@@ -87,9 +87,9 @@ function SelfImprovementSection() {
     const circleRefs = [circle1Ref.current, circle2Ref.current, circle3Ref.current, circle4Ref.current];
 
     gsap.from(circleRefs, {
-        duration: 3.5,
-        stagger: 0.45,
-        opacity: 0,
+        duration: 4,
+        stagger: 1.5,
+        backgroundColor: "white",
         ease: "power1.inOut",
         scrollTrigger: circle1Ref.current,
     });
