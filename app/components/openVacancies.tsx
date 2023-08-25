@@ -27,15 +27,22 @@ function OpenVacancies() {
     });
   }, []);
 
-  const handleMouseEnter = (ref,btnRef) => {
+  const handleMouseEnter = (ref: React.MutableRefObject<null>, btnRef: React.MutableRefObject<null>) => {
     const t = gsap.timeline();
-    t.to(ref.current, { duration: 0.35, backgroundColor: '#ffd4af' })
-     .to(ref.current, { duration: 0.35, height: '17.5rem' });
+    t.to(ref.current, { duration: 0.35, backgroundColor: "#ffd4af" }).to(
+      ref.current,
+      { duration: 0.35, height: "17.5rem" }
+    );
 
-    gsap.from(btnRef.current, { duration: 0.35, scale: 0.3, delay: 0.34, ease: 'power4' });
+    gsap.from(btnRef.current, {
+      duration: 0.35,
+      scale: 0.3,
+      delay: 0.34,
+      ease: "power4",
+    });
   };
 
-  const handleMouseLeave = (ref,btnRef) => {
+  const handleMouseLeave = (ref: React.MutableRefObject<null>, btnRef: React.MutableRefObject<null>) => {
     const t = gsap.timeline();
     t.to(ref.current, { duration: 0.35, backgroundColor: '#fefbec' })
      .to(ref.current, { duration: 0.35, height: '12.5rem' });
@@ -46,7 +53,6 @@ function OpenVacancies() {
 
   return (
     <div className="py-24 px-14 relative h-[80vh] w-[90%] flex flex-col p-8 gap-16">
-
       {/* Heading*/}
 
       <div ref={headingRef}>
@@ -58,58 +64,72 @@ function OpenVacancies() {
       <div className="flex justify-between">
         <div
           ref={card1Ref}
-          onMouseEnter={() => handleMouseEnter(card1Ref,btn1Ref)}
-          onMouseLeave={() => handleMouseLeave(card1Ref,btn1Ref)}
-          className="flex flex-col bg-[#fefbec] w-[31%] overflow-hidden h-[12.5rem] p-8 gap-4 rounded-2xl"
+          onMouseEnter={() => handleMouseEnter(card1Ref, btn1Ref)}
+          onMouseLeave={() => handleMouseLeave(card1Ref, btn1Ref)}
+          className="flex flex-col bg-[#fefbec] w-[31.5%] overflow-hidden h-[12.5rem] p-8 gap-4 rounded-2xl"
         >
           <h1 className="text-xl font-semibold">Senior Full-Stack Engineer</h1>
           <ul className="list-disc pl-4 flex flex-col gap-2">
             <li>Full-time position</li>
             <li>Berlin or remote</li>
-            <li>Full-time position</li>
+            <li>€65-85k, 0.5-1.50% equity share options</li>
           </ul>
 
-          <div className='py-[1.28rem] flex justify-start w-full'>
-            <button ref={btn1Ref} className='py-[1rem] px-[1.35rem] bg-black text-white rounded-full'>See details</button>
+          <div className="py-[1.28rem] flex justify-start w-full">
+            <button
+              ref={btn1Ref}
+              className="py-[1rem] px-[1.35rem] bg-black text-white rounded-full"
+            >
+              See details
+            </button>
           </div>
         </div>
 
         <div
           ref={card2Ref}
-          onMouseEnter={() => handleMouseEnter(card2Ref,btn2Ref)}
-          onMouseLeave={() => handleMouseLeave(card2Ref,btn2Ref)}
-          className="flex flex-col bg-[#fefbec] w-[31%] overflow-hidden h-[12.5rem] p-8 gap-4 rounded-2xl"
+          onMouseEnter={() => handleMouseEnter(card2Ref, btn2Ref)}
+          onMouseLeave={() => handleMouseLeave(card2Ref, btn2Ref)}
+          className="flex flex-col bg-[#fefbec] w-[33%] overflow-hidden h-[12.5rem] p-8 gap-4 rounded-2xl"
         >
-          <h1 className="text-xl font-semibold">Another Job Title</h1>
+          <h1 className="text-xl font-semibold">Senior Designer</h1>
           <ul className="list-disc pl-4 flex flex-col gap-2">
             <li>Full-time position</li>
-            <li>Another location</li>
-            <li>Full-time position</li>
+            <li>Berlin or remote</li>
+            <li>€40-55k, 0.25-0.50% equity share options</li>
           </ul>
 
-          <div className='py-[1.28rem]'>
-            <button ref={btn2Ref} className='py-[1rem] px-[1.35rem] bg-black text-white rounded-full'>See details</button>
+          <div className="py-[1.28rem]">
+            <button
+              ref={btn2Ref}
+              className="py-[1rem] px-[1.35rem] bg-black text-white rounded-full"
+            >
+              See details
+            </button>
           </div>
         </div>
 
         <div
           ref={card3Ref}
-          onMouseEnter={() => handleMouseEnter(card3Ref,btn3Ref)}
-          onMouseLeave={() => handleMouseLeave(card3Ref,btn3Ref)}
-          className="flex flex-col bg-[#fefbec] w-[31%] overflow-hidden h-[12.5rem] p-8 gap-4 rounded-2xl"
+          onMouseEnter={() => handleMouseEnter(card3Ref, btn3Ref)}
+          onMouseLeave={() => handleMouseLeave(card3Ref, btn3Ref)}
+          className="flex flex-col bg-[#fefbec] w-[31.5%] overflow-hidden h-[12.5rem] p-8 gap-4 rounded-2xl"
         >
-          <h1 className="text-xl font-semibold">Yet Another Job Title</h1>
+          <h1 className="text-xl font-semibold">Superstar Intern</h1>
           <ul className="list-disc pl-4 flex flex-col gap-2">
             <li>Full-time position</li>
-            <li>Another location</li>
-            <li>Full-time position</li>
+            <li>Berlin or remote</li>
+            <li>€20-24k, 0.5-1.50% equity share options</li>
           </ul>
 
-          <div className='py-[1.28rem]'>
-            <button ref={btn3Ref} className='py-[1rem] px-[1.35rem] bg-black text-white rounded-full'>See details</button>
+          <div className="py-[1.28rem]">
+            <button
+              ref={btn3Ref}
+              className="py-[1rem] px-[1.35rem] bg-black text-white rounded-full"
+            >
+              See details
+            </button>
           </div>
         </div>
-
       </div>
     </div>
   );
