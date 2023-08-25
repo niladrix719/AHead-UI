@@ -8,6 +8,7 @@ function WorkWithUs() {
   const headingRef = useRef(null);
   const heading2Ref = useRef(null);
   const scrollRef = useRef(null);
+  const charRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -38,6 +39,15 @@ function WorkWithUs() {
       ease: "back.inOut",
       scrollTrigger: heading2Ref.current,
     });
+
+    gsap.from(charRef.current, {
+      duration: 1.5,
+      rotate: -35,
+      yoyo: true,
+      repeat: -1,
+      ease: "back.inOut",
+      scrollTrigger: charRef.current,
+    });
   }, []);
 
   return (
@@ -48,7 +58,7 @@ function WorkWithUs() {
         <h1 ref={headingRef} className="text-6xl font-semibold">Work with us</h1>
         <div className="flex-col bg-white w-full rounded-3xl shadow-lg shadow[#eeebfef7]">
           <div className="p-10 flex flex-col gap-4">
-          <Image src='/char5.png' alt='animation' height={60} width={60} />
+          <Image ref={charRef} src='/char5.png' alt='animation' height={60} width={60} />
             <h1 className="text-3xl font-semibold">About</h1>
             <p className="text-2xl text-zinc-600 py-2 leading-9">
               At ahead our goal is to make self- improvement fun and lasting. We

@@ -15,6 +15,8 @@ function SocialTest() {
   const timeline3Ref = useRef(null);
   const timeline4Ref = useRef(null);
 
+  gsap.registerPlugin(ScrollTrigger);
+
   useEffect(() => {
     gsap.from([step1Ref.current, step2Ref.current, step3Ref.current], {
       duration: 0.45,
@@ -26,8 +28,9 @@ function SocialTest() {
     });
 
     gsap.from([timeline1Ref.current, timeline2Ref.current, timeline3Ref.current, timeline4Ref.current], {
-      duration: 0.45,
+      duration: 0.75,
       scale: 0.75,
+      x: 80,
       opacity: 0.5,
       ease: "back",
       stagger: 0.15,

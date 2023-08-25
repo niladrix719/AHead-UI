@@ -69,23 +69,23 @@ function Header() {
     gsap.from(char1ref.current, {
       duration: 1,
       x: 0,
-      y: 300,
+      y: 500,
       rotate: 150,
       scale: 0.5,
       ease: "back",
     });
     gsap.from(char2ref.current, {
       duration: 1,
-      y: -300,
-      x: -90,
+      y: -500,
+      x: -200,
       scale: 0.5,
       rotate: 150,
       ease: "back",
     });
     gsap.from(char3ref.current, {
       duration: 1,
-      x: 300,
-      y: -90,
+      x: 500,
+      y: -200,
       scale: 0.5,
       rotate: 150,
       ease: "back",
@@ -115,9 +115,9 @@ function Header() {
       ease: "power3.inOut",
     });
     gsap.from(border2ref.current, {
-      duration: 0.8,
+      duration: 0.9,
       scale: 0.75,
-      rotate: 120,
+      rotate: 90,
       ease: "power3.inOut",
     });
   }, []);

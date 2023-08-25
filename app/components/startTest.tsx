@@ -1,4 +1,22 @@
+'use client';
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 function StartTest() {
+  const btnRef = useRef(null);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    gsap.from(btnRef.current, {
+      duration: 0.65,
+      scale: 0.65,
+      ease: "back",
+      scrollTrigger: btnRef.current,
+    });
+  }, []);
+
   return (
     <div className="py-32 px-80 flex flex-col items-center gap-[1.25rem]">
 
@@ -15,7 +33,7 @@ function StartTest() {
 
       <p className="text-2xl py-8">with love, Team Ahead</p>
 
-      <button className='bg-black text-lg rounded-full p-8 py-4 text-white'>Start Test</button>
+      <button ref={btnRef} className='bg-black text-lg rounded-full p-8 py-4 text-white'>Start Test</button>
 
       <p className="text-lg text-zinc-600">takes only 5 minutes</p>
     </div>
